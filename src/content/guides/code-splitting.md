@@ -237,11 +237,11 @@ __src/index.js__
 +   return import(/* webpackChunkName: "lodash" */ 'lodash').then(_ => {
 +     var element = document.createElement('div');
 +
-+     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
++     element.innerHTML = _.default.join(['Hello', 'webpack'], ' ');
 +
 +     return element;
 +
-+   }).catch(error => 'An error occurred while loading the component');
++   }).catch(error => console.log(error));
   }
 
 - document.body.appendChild(component());
